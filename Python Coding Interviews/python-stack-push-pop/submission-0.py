@@ -1,0 +1,16 @@
+from typing import List
+
+
+def reverse_list(arr: List[int]) -> List[int]:
+    if len(arr)>0:   
+        i,j=0,len(arr)-1
+        while j>i:
+            arr[i],arr[j]=arr[j],arr[i]
+            i+=1
+            j-=1
+    return arr
+
+# do not modify below this line
+print(reverse_list([1, 2, 3]))
+print(reverse_list([3, 2, 1, 4, 6, 2]))
+print(reverse_list([1, 9, 7, 3, 2, 1, 4, 6, 2]))

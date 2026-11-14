@@ -1,0 +1,16 @@
+from typing import List
+
+
+def find_max_in_each_list(nested_arr: List[List[int]]) -> List[int]:
+    tmp=[]
+    for r in nested_arr:
+        curr=0
+        for c in r:
+            curr=max(c,curr)
+        tmp.append(curr)
+    return tmp
+
+# do not modify below this line
+print(find_max_in_each_list([[1, 2], [3, 4, 2]]))
+print(find_max_in_each_list([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+print(find_max_in_each_list([[5, 6, 2, 8], [9], [9, 10], [11, 10, 11]]))
